@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatroom</title>
+    <title>Welcome</title>
 </head>
 <body>
     
 <h1>Welcome to the Chatroom</h1>
 <div>
-    <input type="text" id="username" placeholder="Username:">
-    <input type="text" id="password" placeholder="Password:">
-    <button type="submit">Login</button>
-    <a href="chat.html" class="btn">join</a>
+        <main class="join-main">
+            <form action="chat.html">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Enter username..."
+                        required
+                    />
+                </div>
+                <!-- <div class="form-control">
+                    <label for="room">Room</label>
+                    <select name="room" id="room">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </div> -->
+                <button type="submit" class="btn">Join Chat</button>
+            </form>
+        </main>
+    </div>
 </div>
 
     
     <script src="/socket.io/socket.io.js"></script>
-    <script src="chat.js"></script>
 </body>
 </html>
